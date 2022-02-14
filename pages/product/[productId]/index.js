@@ -8,7 +8,7 @@ const ProductDetails = () => {
     <div style={{ textAlign: "center" }}>
       <h2>Product Details Page</h2>
       <div>
-        <h3>Product {p_id} details </h3>
+        <h3>Product {p_id} Details </h3>
       </div>
     </div>
   );
