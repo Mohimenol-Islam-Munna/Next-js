@@ -1,6 +1,6 @@
 const Contact = () => {
     return (
-      <div>
+      <div style={{textAlign: "center"}}>
         <h2>Contact Page</h2>
       </div>
     );

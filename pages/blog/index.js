@@ -1,6 +1,6 @@
 const Blog = () => {
     return (
-      <div>
+      <div style={{textAlign: "center"}}>
         <h2>Blog Page</h2>
       </div>
     );

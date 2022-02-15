@@ -1,6 +1,6 @@
 const About = () => {
     return (
-      <div>
+      <div style={{textAlign: "center"}}>
         <h2>About Page</h2>
       </div>
     );

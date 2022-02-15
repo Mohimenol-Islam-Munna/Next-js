@@ -1,6 +1,6 @@
 const Product = () => {
     return (
-      <div>
+      <div style={{textAlign: "center"}}>
         <h2>Product Page</h2>
         <div>
             <h3>Product 1 dtails</h3>
