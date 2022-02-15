@@ -14,7 +14,7 @@ const Product = () => {
           </Link>
         </h3>
         <h3>
-          <Link href="/product/2">
+          <Link href="/product/2" replace>
             <a>Product 2 details</a>
           </Link>
         </h3>
