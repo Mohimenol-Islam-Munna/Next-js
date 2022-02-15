@@ -5,7 +5,7 @@ const Home = () => {
   const router = useRouter();
 
   const navigateHandler = () => {
-    console.log("novigation successfull after click");
+    console.log("navigation successfull after click");
     // router.replace("/product"); its also work like replace in Link 
     router.push("/product");
   };
