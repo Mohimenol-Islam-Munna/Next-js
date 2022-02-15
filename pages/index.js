@@ -1,6 +1,15 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Home = () => {
+  const router = useRouter();
+
+  const navigateHandler = () => {
+    console.log("novigation successfull after click");
+    // router.replace("/product"); its also work like replace in Link 
+    router.push("/product");
+  };
+
   return (
     <div style={{ textAlign: "center" }}>
       <h2>Home Page</h2>
@@ -16,6 +25,11 @@ const Home = () => {
             <a style={{ display: "block" }}>Product</a>
           </Link>
         </ul>
+      </div>
+      <div>
+        <button onClick={navigateHandler}>
+          Click Me To Nagigate Another Page/Route
+        </button>
       </div>
     </div>
   );
