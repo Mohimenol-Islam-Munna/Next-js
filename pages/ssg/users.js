@@ -1,5 +1,6 @@
+import Link from "next/link";
+
 const Users = ({ users }) => {
-  console.log("users list in component :::", users);
 
   return (
     <div style={{ width: "60%", margin: "10px auto" }}>
@@ -25,6 +26,11 @@ const Users = ({ users }) => {
           >
             <h4>User Name: {user.name}</h4>
             <p>User Email: {user.email}</p>
+            <button>
+              <Link href={`/ssg/${user.id}`}>
+                <a>Details</a>
+              </Link>
+            </button>
           </div>
         ))}
       </div>
