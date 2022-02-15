@@ -1,15 +1,32 @@
+import Link from "next/link";
+
 const Product = () => {
-    return (
-      <div style={{textAlign: "center"}}>
-        <h2>Product Page</h2>
-        <div>
-            <h3>Product 1 dtails</h3>
-            <h3>Product 2 dtails</h3>
-            <h3>Product 3 dtails</h3>
-        </div>
+
+  let p_id = 10;
+
+  return (
+    <div style={{ textAlign: "center" }}>
+      <h2>Product Page</h2>
+      <div>
+        <h3>
+          <Link href="/product/1">
+            <a>Product 1 details</a>
+          </Link>
+        </h3>
+        <h3>
+          <Link href="/product/2">
+            <a>Product 2 details</a>
+          </Link>
+        </h3>
+
+        <h3>
+          <Link href={`/product/${p_id}`}>
+            <a>Product {p_id} details</a>
+          </Link>
+        </h3>
       </div>
-    );
-  };
-  
-  export default Product;
-  
+    </div>
+  );
+};
+
+export default Product;
