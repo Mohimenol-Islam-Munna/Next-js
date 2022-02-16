@@ -6,8 +6,6 @@ const UserDetails = ({ user }) => {
 
   const { userId } = router.query;
 
-  console.log("router object :::", router);
-
   //   if (router.isFallback) {
   //     return <h3>Loading...</h3>;
   //   }
@@ -39,7 +37,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { params } = context;
-  console.log("single user params ::", params);
 
   const result = await fetch(
     `https://jsonplaceholder.typicode.com/users/${params.userId}`
