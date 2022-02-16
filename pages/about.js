@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+
 const About = () => {
     return (
       <div style={{textAlign: "center"}}>
@@ -7,4 +9,13 @@ const About = () => {
   };
   
   export default About;
+
+  About.getLayout = function pageLayout(page){
+    return (
+      <>
+      {page}
+      <Footer />
+      </>
+    )
+  }
   
