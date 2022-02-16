@@ -8,9 +8,9 @@ const UserDetails = ({ user }) => {
 
   console.log("router object :::", router);
 
-//   if (router.isFallback) {
-//     return <h3>Loading...</h3>;
-//   } 
+  //   if (router.isFallback) {
+  //     return <h3>Loading...</h3>;
+  //   }
 
   return (
     <div style={{ width: "60%", margin: "10px auto" }}>
@@ -53,5 +53,6 @@ export async function getStaticProps(context) {
     props: {
       user: user,
     },
+    revalidate: 10,
   };
 }
