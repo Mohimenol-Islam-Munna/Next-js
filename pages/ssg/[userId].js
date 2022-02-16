@@ -1,4 +1,3 @@
-import { getRouteRegex } from "next/dist/shared/lib/router/utils";
 import { useRouter } from "next/router";
 
 const UserDetails = ({ user }) => {
