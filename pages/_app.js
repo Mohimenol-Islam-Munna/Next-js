@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
         <title>Ecommerce</title>
         <meta name="Ecommerce Site" content="This is the Ecommerce Site"></meta>
       </Head>
-      <Header>Content</Header>
+      <Header><h2>ENV Variables :: {process.env.NEXT_PUBLIC_SHOPNAME}</h2></Header>
       <Component {...pageProps} />
       <Footer></Footer>
     </>
