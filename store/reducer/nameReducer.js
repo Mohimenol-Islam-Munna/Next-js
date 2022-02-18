@@ -4,7 +4,7 @@ const initialState = {
   name: "Iftekharul Islam Ifti",
 };
 
-const name = (state = initialState, action) => {
+const nameReducer = (state = initialState, action) => {
   const { type, payload } = action;
 
   switch (type) {
@@ -19,4 +19,4 @@ const name = (state = initialState, action) => {
   }
 };
 
-export default name;
+export default nameReducer;
