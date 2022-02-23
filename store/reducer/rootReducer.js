@@ -1,7 +1,7 @@
-import {combineReducers} from "redux";
-import name from "./name";
+import { combineReducers } from "redux";
+import nameReducer from "./nameReducer";
+import postReducer from "./postReducer";
 
-
-const rootReducer = combineReducers({name})
+const rootReducer = combineReducers({ nameReducer, postReducer });
 
 export default rootReducer;
