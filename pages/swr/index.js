@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import useSWR from "swr";
 import axios from "axios";
 
+const fetcher = (url) => axios.get(url).then((res) => res.data);
+
 const ImagesGellary = () => {
-  const { data, error } = useSWR("swrp", async () => {
-    fetch("https://jsonplaceholder.typicode.com/albums").then((res) => {
-      return res.data;
-    });
-  });
+  const { data, error } = useSWR(
+    "https://jsonplaceholder.typicode.com/albums",
+    fetcher
+  );
 
   console.log("data fetching with swr ::", data);
 
@@ -17,7 +18,7 @@ const ImagesGellary = () => {
 
   return (
     <div style={{ width: "60%", margin: "10px auto" }}>
-      <h2>Images Gellary</h2>
+      <h2>Users List</h2>
       {data?.map((n) => (
         <div
           key={n.id}
