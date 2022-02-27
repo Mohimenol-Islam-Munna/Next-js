@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { getAllPosts } from "../../store/actions/postActions";
 import axios from "axios";
 import { GET_ALL_POSTS } from "../../store/actions/actionTypes";
+import PostChildComponent from "../../components/PostChildComponent";
 
 const Blog = ({ data }) => {
   const postList = useSelector((state) => state.postReducer);
@@ -11,6 +12,10 @@ const Blog = ({ data }) => {
 
   return (
     <div style={{ width: "60%", margin: "20px auto" }}>
+      <div>
+        <PostChildComponent />
+      </div>
+
       <h2>Blog Posts</h2>
       {postList.map((post) => (
         <div
@@ -20,6 +25,7 @@ const Blog = ({ data }) => {
             marginTop: "10px",
             borderRadius: "10px",
           }}
+          key={post.id}
         >
           <h3>{post.title}</h3>
           <p>{post.body}</p>
