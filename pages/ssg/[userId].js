@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 const UserDetails = ({ user }) => {
   const router = useRouter();
 
-  const { userId } = router.query;
+  const { userId } = router.query; 
 
   //   if (router.isFallback) {
   //     return <h3>Loading...</h3>;
@@ -43,7 +43,13 @@ export async function getStaticProps(context) {
 
   const user = await result.json();
 
-  console.log("signle user :: ", user);
+  if (!user) {
+    return {
+      redirect: {
+        destination: "/no-user",
+      },
+    };
+  }
 
   return {
     props: {
