@@ -5,6 +5,7 @@ const UserDetails = ({ user }) => {
 
   const { userId } = router.query; 
 
+  // this is need when fallback is true  
   //   if (router.isFallback) {
   //     return <h3>Loading...</h3>;
   //   }
